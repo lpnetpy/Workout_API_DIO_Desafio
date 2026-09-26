@@ -54,6 +54,20 @@ make run
 ```
 e acesse: http://127.0.0.1:8000/docs
 
+## Implementações do desafio
+
+Este repositório contém a implementação do desafio final da Workout API da DIO, incluindo:
+
+- filtros por `nome` e `cpf` no endpoint `GET /atletas`;
+- resposta paginada de atletas com `limit` e `offset` usando `fastapi-pagination`;
+- retorno dos dados relacionados de categoria e centro de treinamento;
+- tratamento de `sqlalchemy.exc.IntegrityError` com rollback da sessão;
+- mensagem específica para CPF de atleta duplicado e status HTTP `303`;
+- tratamento de duplicidade nos cadastros de categorias e centros de treinamento;
+- configuração do PostgreSQL local via Docker Compose, com credenciais sobrescrevíveis por variáveis de ambiente.
+
+O projeto é baseado no repositório original da [Digital Innovation One](https://github.com/digitalinnovationone/workout_api), usado como referência para as evoluções deste desafio.
+
 # Desafio Final
     - adicionar query parameters nos endpoints
         - atleta
